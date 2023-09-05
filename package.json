@@ -1,0 +1,46 @@
+{
+  "name": "turbo",
+  "packageManager": "yarn@3.6.3",
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "license": "RSALv2",
+  "private": true,
+  "scripts": {
+    "build": "turbo run build",
+    "dev": "turbo run dev",
+    "lint": "turbo run lint",
+    "lint-staged": "lint-staged",
+    "format": "prettier --write \"**/*.{ts,tsx,md}\""
+  },
+  "devDependencies": {
+    "@types/node": "^20.5.9",
+    "@typescript-eslint/eslint-plugin": "^5.9.1",
+    "@typescript-eslint/parser": "^6.6.0",
+    "eslint": "^8.48.0",
+    "eslint-config-prettier": "^9.0.0",
+    "eslint-config-react-app": "^7.0.1",
+    "eslint-plugin-autofix": "^1.1.0",
+    "eslint-plugin-compat": "^4.1.4",
+    "eslint-plugin-flowtype": "^8.0.3",
+    "eslint-plugin-import": "^2.28.1",
+    "eslint-plugin-jsx-a11y": "^6.7.1",
+    "eslint-plugin-markdown": "^3.0.1",
+    "eslint-plugin-prettier": "^5.0.0",
+    "eslint-plugin-unused-imports": "^3.0.0",
+    "lint-staged": "^14.0.1",
+    "prettier": "^3.0.3",
+    "tsconfig": "*",
+    "turbo": "latest",
+    "typescript": "^5.2.2"
+  },
+  "lint-staged": {
+    "apps/**/*.{ts,tsx}": [
+      "eslint --fix --cache"
+    ],
+    "packages/**/*.{ts,tsx}": [
+      "eslint --fix --cache"
+    ]
+  }
+}

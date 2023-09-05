@@ -1,0 +1,29 @@
+{
+  "name": "@internal/utils",
+  "packageManager": "yarn@3.6.3",
+  "private": true,
+  "type": "module",
+  "exports": "./build/src/index.js",
+  "scripts": {
+    "build": "yarn clean && tsc",
+    "clean": "rm -rf build"
+  },
+  "dependencies": {
+    "loglayer": "^2.1.0",
+    "nanoid": "^4.0.2",
+    "pino": "^8.15.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.5.9",
+    "chokidar": "^3.5.3",
+    "concurrently": "^8.2.1",
+    "eslint": "8.48.0",
+    "eslint-config-custom": "*",
+    "nodemon": "^3.0.1",
+    "tsconfig": "*",
+    "typescript": "5.2.2"
+  },
+  "engines": {
+    "node": ">=20.0.0"
+  }
+}
